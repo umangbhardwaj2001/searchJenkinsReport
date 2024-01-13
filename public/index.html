@@ -29,8 +29,8 @@
       }
 
       const response = await fetch(`/search?u=${encodeURIComponent(url)}&s=${encodeURIComponent(searchText)}`);
-      // const result = await response.json();
-
+      const result = await response.json();
+      alert(response.statusText)
       // alert('Matching texts:\n' + JSON.stringify(result, null, 2));
     }
   </script>
