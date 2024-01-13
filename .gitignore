@@ -3,3 +3,5 @@ node_modules/
 
 #output files
 output*
+# Local Netlify folder
+.netlify
