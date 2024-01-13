@@ -2,7 +2,7 @@
     "name": "webpage-text-search-app",
     "version": "1.0.0",
     "description": "Webpage Text Search Application",
-    "repository": "",
+    "repository": "https://github.com/umangbhardwaj2001/searchJenkinsReport",
     "main": "server.js",
     "scripts": {
       "build":"netlify deploy --prod"
@@ -12,7 +12,8 @@
       "puppeteer": "latest"
     },
     "devDependencies": {
-      "nodemon": "latest"
+      "nodemon": "latest",
+      "netlify-cli":"latest"
     },
     "engines": {
       "node": "latest"
