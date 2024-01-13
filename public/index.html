@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Webpage Text Search</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Webpage Text Search</h1>
+    <label for="urlInput">URL:</label>
+    <input type="text" id="urlInput" placeholder="Enter URL">
+
+    <label for="searchTextInput">Search Text:</label>
+    <input type="text" id="searchTextInput" placeholder="Enter search text">
+
+    <button onclick="search()">Search</button>
+  </div>
+
+  <script>
+    async function search() {
+      const url = document.getElementById('urlInput').value;
+      const searchText = document.getElementById('searchTextInput').value;
+
+      if (!url || !searchText) {
+        alert('Please enter both URL and search text.');
+        return;
+      }
+
+      const response = await fetch(`/search?u=${encodeURIComponent(url)}&s=${encodeURIComponent(searchText)}`);
+      // const result = await response.json();
+
+      // alert('Matching texts:\n' + JSON.stringify(result, null, 2));
+    }
+  </script>
+</body>
+</html>
