@@ -5,7 +5,7 @@
     "repository": "",
     "main": "server.js",
     "scripts": {
-      "build":"npm start",
+      "build":"netlify deploy --prod",
       "start": "node server.js",
       "dev": "nodemon server.js"
     },
